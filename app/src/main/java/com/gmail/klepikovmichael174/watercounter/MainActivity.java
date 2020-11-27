@@ -22,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
         displayWaterCount(0);
     }
     /**
-     * Displays the number of water you have drunk.
+     * Displays the the number of liters of water you drank.
      */
     public void displayWaterCount(int score) {
         TextView scoreView = (TextView) findViewById(R.id.watercounter);
         scoreView.setText(String.valueOf(score));
     }
-    //decrement button (decrease number of drunken water)
+    //decrement button (decrease number of water)
     public void decrement (View view){
         if (waterQuantity == 0) {
             //Show toast message
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         waterQuantity -= 1;
         displayWaterCount(waterQuantity);
     }
-    //increment button (increase number of drunken water)
+    //increment button (increase number of water)
     public void increment (View view){
         waterQuantity += 1;
         displayWaterCount(waterQuantity);
